@@ -24,8 +24,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)doSth:(id<DoSthProtocol>)b {
-    [b doSthMethod];
+- (void)doSth:(id<DoSthProtocol>)delegate {
+    if (delegate) {
+        [delegate doSthMethod];
+    }
 }
 
 @end

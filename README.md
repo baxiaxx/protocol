@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #protocol
 1、接口的实现
 
@@ -20,13 +19,13 @@ Objective-C既不支持多重继承，也没有使用Interface关键词作为接
 
 如下类A的对象想要调用类B的对象的方法：
 
-Class A中：
+Class AViewController中：
 
-- (void)doSth:(B *)b
+- (void)doSth:(BViewController *)b
 
 {
 
-　　[b doSth];
+　　[b doSthMethod];
 
 }
 
@@ -34,27 +33,30 @@ Class A中：
 
 定义一个protocol：
 
-@protocol doSthDelegate
+@protocol DoSthProtocol
 
-(void)doSth;
+(void)doSthMethod;
 
 @end
 
  
 
-Class A中：
+Class AViewController中：
 
-- (void)doSth:(id<doSthDelegate>) delegate
+- (void)doSth:(id<DoSthProtocol>) delegate
 
 {
 
 　　if (delegate)
 
-　　[delegate doSth];
+　　[delegate doSthMethod];
 
 }
 
- 
+ ViewController中调用：
+ AViewController *ctrl = [[AViewController alloc] init];
+ [ctrl doSth:[[BViewController alloc] init]];
+ [self.navigationController pushViewController:ctrl animated:YES];
 
 4、Objective-C中的接口与抽象基类
 

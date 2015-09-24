@@ -11,6 +11,6 @@
 
 @interface AViewController : UIViewController
 
-- (void)doSth:(id<DoSthProtocol>)b;
+- (void)doSth:(id<DoSthProtocol>)delegate;
 
 @end
