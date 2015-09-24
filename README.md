@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #protocol
 1、接口的实现
 
@@ -97,3 +98,7 @@ if (delegate && delegate respondsToSelector:@selector(func)
 7、总结
 
 在Objective-C中，接口的支持主要由协议protocol来实现，抽象基类用于简化语法、提供通用方法的基础实现。
+=======
+# protocol
+面向接口编程理解
+>>>>>>> 83ef99088a866a8112309cd36493962bde842712
