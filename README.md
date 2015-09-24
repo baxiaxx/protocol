@@ -43,14 +43,12 @@ Class AViewController中：
 
 Class AViewController中：
 
-- (void)doSth:(id<DoSthProtocol>) delegate
-
+- (void)doSth:( id<DoSthProtocol> ) delegate
 {
-
 　　if (delegate)
-
-　　[delegate doSthMethod];
-
+	{
+		[delegate doSthMethod];
+	}
 }
 
  ViewController中调用：
